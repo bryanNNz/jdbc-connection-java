@@ -25,6 +25,10 @@ public class App {
 		catch (SQLException e) {
 			throw new DBException(e.getMessage());
 		}
+		
+		DB.closeStatement(st);
+		DB.closeResultSet(rs);
+		DB.closeDB();
 	}
 
 }
